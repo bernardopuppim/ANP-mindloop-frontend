@@ -89,7 +89,7 @@ export default function Home() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          texto_evento: eventoText,
+          descricao_evento: eventoText,
         }),
       })
 
