@@ -182,15 +182,14 @@ export default function Home() {
         {/* Header */}
         <div className="mb-16 mt-8">
           <div className="flex items-center gap-3 mb-8">
-            <h5 className="text-5xl font-bold">
+            <h5 className="text-3xl font-bold">
               <span className="text-gray-900">Loopyn</span>
-              <span className="text-purple-600">Lab</span>
+              <span className="text-purple-600">SMS</span>
             </h5>
           </div>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl">
-            LoopynLATS é um motor de árvores de decisão probabilísticas projetado para lidar com sistemas do mundo real — onde as decisões raramente são binárias ou inequívocas.
-            O exemplo apresentado ilustra uma aplicação hipotética do método LATS (Language Agent Tree Search). Embora não esteja vinculado a nenhuma norma ou requisito regulatório específico, o modelo demonstra coerência lógica e consistência estrutural para apoiar a avaliação de eventos de Segurança, Meio Ambiente e Saúde (SMS).
-            Trata-se de um exercício conceitual e experimental, voltado à exploração de como agentes baseados em linguagem podem navegar estruturas decisórias complexas, lidar com incerteza e apoiar o raciocínio humano — e não de um sistema automatizado de classificação normativa.</p>
+            O exemplo ilustra uma aplicação hipotética do método LATS (Language Agent Tree Search). Embora não esteja vinculado a nenhuma norma ou requisito regulatório específico, o modelo demonstra coerência lógica e consistência estrutural para apoiar a avaliação de eventos de Segurança, Meio Ambiente e Saúde (SMS).
+          </p>
         </div>
 
         {/* Ideia Central Box */}

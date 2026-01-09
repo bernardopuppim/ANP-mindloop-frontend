@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "MindLoopLab - Motor de Decisão Probabilística",
+  title: "LoopynLab - Motor de Decisão Probabilística",
   description: "Sistema LATS-P com governança Human-in-the-Loop para classificação de eventos SMS",
 }
 
