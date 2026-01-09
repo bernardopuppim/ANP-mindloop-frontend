@@ -1,0 +1,20 @@
+# Test files
+*.spec.ts
+playwright.config.ts
+playwright-report/
+test-results/
+test-*.js
+test-*.sh
+*.test.js
+e2e-*.js
+
+# Documentation
+*.md
+!README.md
+
+# Environment files (already in .gitignore but being explicit)
+.env.local
+.env.*.local
+.env.check
+.env.verify
+.env.production.check
