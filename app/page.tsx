@@ -182,27 +182,27 @@ export default function Home() {
         {/* Header */}
         <div className="mb-16 mt-8">
           <div className="flex items-center gap-3 mb-8">
-            <h1 className="text-5xl font-bold">
-              <span className="text-gray-900">MindLoop</span>
+            <h5 className="text-5xl font-bold">
+              <span className="text-gray-900">Loopyn</span>
               <span className="text-purple-600">Lab</span>
-            </h1>
+            </h5>
           </div>
-          <h2 className="text-3xl font-medium text-gray-800 mb-6 leading-relaxed">
-            MindLoopLATS é um motor de árvores de decisão probabilísticas construído para sistemas do mundo real — onde as decisões raramente são preto no branco.
-          </h2>
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl">
-            Ele mede a incerteza explicitamente, escala a ambiguidade para humanos e registra cada decisão para auditabilidade completa.
-          </p>
+            LoopynLATS é um motor de árvores de decisão probabilísticas projetado para lidar com sistemas do mundo real — onde as decisões raramente são binárias ou inequívocas.
+            O exemplo apresentado ilustra uma aplicação hipotética do método LATS (Language Agent Tree Search). Embora não esteja vinculado a nenhuma norma ou requisito regulatório específico, o modelo demonstra coerência lógica e consistência estrutural para apoiar a avaliação de eventos de Segurança, Meio Ambiente e Saúde (SMS).
+            Trata-se de um exercício conceitual e experimental, voltado à exploração de como agentes baseados em linguagem podem navegar estruturas decisórias complexas, lidar com incerteza e apoiar o raciocínio humano — e não de um sistema automatizado de classificação normativa.</p>
         </div>
 
         {/* Ideia Central Box */}
         <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-10 mb-12 border border-purple-200">
           <h3 className="text-2xl font-semibold text-purple-700 mb-4">Ideia Central</h3>
           <p className="text-lg italic text-gray-700 mb-6">
-            Se um sistema está incerto, ele deve dizer isso — e pedir ajuda.
+            Em situações ambíguas, o exemplo demonstra que não decidir também é uma decisão válida.
           </p>
           <p className="text-base text-gray-600 leading-relaxed">
-            MindLoopLATS transforma incerteza em um sinal de controle de primeira classe usando probabilidade, entropia e governança Human-in-the-Loop.
+              Neste cenário hipotético, o sistema reconhece quando a informação disponível não é suficiente
+              para sustentar uma conclusão responsável e, em vez de forçar uma classificação,
+              sinaliza a incerteza e solicita apoio humano para avançar no raciocínio.
           </p>
         </div>
 
@@ -486,7 +486,7 @@ export default function Home() {
         {/* Footer */}
         <div className="mt-16 text-center">
           <p className="text-sm text-gray-500">
-            Powered by LATS-P + HITL | Classificação probabilística com governança humana
+            Powered by LoopynLab| Exemplo aplicado de LoopynLATS
           </p>
         </div>
       </div>
