@@ -2,11 +2,14 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter"
+})
 
 export const metadata: Metadata = {
-  title: "ANP Classifier - Classificação de Eventos SMS",
-  description: "Sistema de classificação de eventos de Segurança, Meio Ambiente e Saúde",
+  title: "MindLoopLab - Motor de Decisão Probabilística",
+  description: "Sistema LATS-P com governança Human-in-the-Loop para classificação de eventos SMS",
 }
 
 export default function RootLayout({

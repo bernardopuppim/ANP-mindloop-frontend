@@ -177,33 +177,50 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
-      <div className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-b from-violet-50 via-purple-50 to-white p-8">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            Classificador de Eventos SMS
-          </h1>
-          <p className="text-gray-600">
-            Sistema de classificação de eventos de Segurança, Meio Ambiente e Saúde
+        <div className="mb-16 mt-8">
+          <div className="flex items-center gap-3 mb-8">
+            <h1 className="text-5xl font-bold">
+              <span className="text-gray-900">MindLoop</span>
+              <span className="text-purple-600">Lab</span>
+            </h1>
+          </div>
+          <h2 className="text-3xl font-medium text-gray-800 mb-6 leading-relaxed">
+            MindLoopLATS é um motor de árvores de decisão probabilísticas construído para sistemas do mundo real — onde as decisões raramente são preto no branco.
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed max-w-4xl">
+            Ele mede a incerteza explicitamente, escala a ambiguidade para humanos e registra cada decisão para auditabilidade completa.
+          </p>
+        </div>
+
+        {/* Ideia Central Box */}
+        <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-10 mb-12 border border-purple-200">
+          <h3 className="text-2xl font-semibold text-purple-700 mb-4">Ideia Central</h3>
+          <p className="text-lg italic text-gray-700 mb-6">
+            Se um sistema está incerto, ele deve dizer isso — e pedir ajuda.
+          </p>
+          <p className="text-base text-gray-600 leading-relaxed">
+            MindLoopLATS transforma incerteza em um sinal de controle de primeira classe usando probabilidade, entropia e governança Human-in-the-Loop.
           </p>
         </div>
 
         {/* Main Card */}
-        <Card className="shadow-lg">
-          <CardHeader>
-            <CardTitle>Descrição do Evento</CardTitle>
-            <CardDescription>
-              Cole abaixo a descrição textual do evento para classificação
+        <Card className="shadow-xl border-0 bg-white/80 backdrop-blur">
+          <CardHeader className="space-y-2 pb-6">
+            <CardTitle className="text-2xl text-gray-900">Classificar Evento SMS</CardTitle>
+            <CardDescription className="text-base text-gray-600">
+              Descreva o evento abaixo para análise automatizada com suporte HITL
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6">
             {/* Textarea */}
             <Textarea
-              placeholder="Exemplo: Durante atividade de manutenção preventiva..."
+              placeholder="Exemplo: Durante atividade de manutenção preventiva em equipamento elétrico..."
               value={eventoText}
               onChange={(e) => setEventoText(e.target.value)}
-              className="min-h-[200px]"
+              className="min-h-[200px] text-base border-gray-300 focus:border-purple-500 focus:ring-purple-500"
               disabled={loading}
             />
 
@@ -211,16 +228,18 @@ export default function Home() {
             <Button
               onClick={handleClassificar}
               disabled={loading || !eventoText.trim()}
-              className="w-full"
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white py-6 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all"
               size="lg"
             >
               {loading ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                   Classificando...
                 </>
               ) : (
-                "Classificar Evento"
+                <>
+                  Classificar Evento →
+                </>
               )}
             </Button>
 
@@ -239,21 +258,21 @@ export default function Home() {
               </Card>
             )}
 
-            {/* Result Display - Institutional Style */}
+            {/* Result Display - Clean Modern Style */}
             {result && result.final && !result.hitl_required && result.resultado_formatado && (
-              <Card className="border-gray-300 bg-white shadow-sm">
+              <Card className="border-purple-200 bg-gradient-to-br from-white to-purple-50/30 shadow-xl">
                 <CardContent className="pt-8 pb-8">
                   <div className="space-y-6">
-                    {/* Institutional Title */}
-                    <div className="border-b border-gray-200 pb-4">
+                    {/* Title */}
+                    <div className="border-b border-purple-100 pb-4">
                       <h3 className="text-2xl font-semibold text-gray-900">
                         Classificação da Ocorrência
                       </h3>
                     </div>
 
                     {/* Assigned Class - Main Highlight */}
-                    <div className="text-center py-8 bg-gray-50 border border-gray-200 rounded">
-                      <p className="text-sm text-gray-600 mb-2 uppercase tracking-wide">
+                    <div className="text-center py-12 bg-white border-2 border-purple-200 rounded-xl shadow-sm">
+                      <p className="text-sm text-purple-600 mb-3 uppercase tracking-widest font-medium">
                         Classe Atribuída
                       </p>
                       <p className="text-5xl font-bold text-gray-900 tracking-tight">
@@ -273,11 +292,11 @@ export default function Home() {
 
                     {/* Technical Justification - Formal LLM Text (Expandable) */}
                     {result.resultado_formatado.justificativa_tecnica && (
-                      <details className="pt-4 border-t border-gray-200">
-                        <summary className="cursor-pointer text-sm text-gray-600 uppercase tracking-wide hover:text-gray-800 transition-colors select-none">
+                      <details className="pt-4 border-t border-purple-100">
+                        <summary className="cursor-pointer text-sm text-purple-700 uppercase tracking-wide hover:text-purple-900 transition-colors select-none font-medium">
                           Justificativa Técnica
                         </summary>
-                        <div className="mt-4 prose prose-sm max-w-none text-gray-800 leading-relaxed text-justify">
+                        <div className="mt-4 prose prose-sm max-w-none text-gray-700 leading-relaxed">
                           {result.resultado_formatado.justificativa_tecnica.split('\n\n').map((paragrafo: string, index: number) => (
                             <p key={index} className="mb-4">
                               {paragrafo}
@@ -465,9 +484,9 @@ export default function Home() {
         </Dialog>
 
         {/* Footer */}
-        <div className="mt-8 text-center text-sm text-gray-500">
-          <p>
-            Powered by LATS-P + HITL | Classificação inteligente com IA
+        <div className="mt-16 text-center">
+          <p className="text-sm text-gray-500">
+            Powered by LATS-P + HITL | Classificação probabilística com governança humana
           </p>
         </div>
       </div>
